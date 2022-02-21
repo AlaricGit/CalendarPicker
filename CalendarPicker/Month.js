@@ -60,7 +60,7 @@ export default function Month(props) {
           </Text>
         </TouchableOpacity>
         :
-        <Text style={[textStyle, styles.disabledText]}>
+        <Text style={styles.disabledDatesTextStyle}>
           { monthName }
         </Text>
       }

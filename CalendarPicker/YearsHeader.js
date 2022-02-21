@@ -26,6 +26,7 @@ export default function YearsHeader(props) {
     onYearViewPrevious,
     onYearViewNext,
     headingLevel,
+    headerWrapperStyle,
   } = props;
 
   const disablePrevious = restrictNavigation && minDate && (minDate.year() >= year);
@@ -37,7 +38,7 @@ export default function YearsHeader(props) {
   }
 
   return (
-    <View style={styles.headerWrapper}>
+    <View style={[styles.headerWrapper, headerWrapperStyle]}>
       <Controls
         disabled={disablePrevious}
         label={previousTitle}

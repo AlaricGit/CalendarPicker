@@ -16,7 +16,6 @@ module.exports = {
             2,
             'always'
         ],
-        'linebreak-style': [2, 'windows'],
         'react/prop-types': [0]
     },
     env: {

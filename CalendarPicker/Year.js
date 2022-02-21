@@ -59,7 +59,7 @@ export default function Year(props) {
           </Text>
         </TouchableOpacity>
         :
-        <Text style={[textStyle, styles.disabledText]}>
+        <Text style={styles.disabledDatesTextStyle}>
           { year }
         </Text>
       }

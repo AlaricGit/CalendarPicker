@@ -484,6 +484,7 @@ export default class CalendarPicker extends Component {
       onMonthChange,
       scrollable,
       horizontal,
+      disabledDatesTextStyle,
     } = this.props;
 
     let content;
@@ -491,7 +492,7 @@ export default class CalendarPicker extends Component {
     case 'months':
       content = (
         <MonthSelector
-          styles={styles}
+          styles={{ ...styles, disabledDatesTextStyle }}
           textStyle={textStyle}
           title={selectMonthTitle}
           currentYear={currentYear}
@@ -500,13 +501,14 @@ export default class CalendarPicker extends Component {
           maxDate={maxDate}
           onSelectMonth={this.handleOnSelectMonthYear}
           headingLevel={headingLevel}
+          headerWrapperStyle={headerWrapperStyle}
         />
       );
       break;
     case 'years':
       content = (
         <YearSelector
-          styles={styles}
+          styles={{ ...styles, disabledDatesTextStyle }}
           textStyle={textStyle}
           title={selectYearTitle}
           initialDate={moment(initialDate)}
@@ -523,6 +525,7 @@ export default class CalendarPicker extends Component {
           nextTitleStyle={nextTitleStyle}
           onSelectYear={this.handleOnSelectMonthYear}
           headingLevel={headingLevel}
+          headerWrapperStyle={headerWrapperStyle}
         />
       );
       break;
